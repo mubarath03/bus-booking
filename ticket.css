@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f7f9;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ticket {
+  background: #ffffff;
+  width: 360px;
+  padding: 20px;
+  margin-top: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+
+.ticket h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #1e90ff;
+}
+
+
+.ticket p {
+  font-size: 14px;
+  margin: 6px 0;
+  color: #333;
+}
+
+.ticket h3 {
+  margin-top: 15px;
+  font-size: 16px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+
+
+#passengerList p {
+  font-size: 14px;
+  padding: 4px 0;
+  border-bottom: 1px dashed #ddd;
+}
+
+
+#qr {
+  display: block;
+  margin: 15px auto 0;
+  width: 150px;
+}
+
+
+button {
+  margin: 20px;
+  padding: 12px 30px;
+  background: #1e90ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0b74d1;
+}
+
+
+/*  TABLET VIEW */
+@media (max-width: 768px) {
+
+  body {
+    padding: 10px;
+  }
+
+  .ticket {
+    width: 90%;
+    max-width: 380px;
+    margin-top: 30px;
+    padding: 18px;
+  }
+
+  button {
+    width: 90%;
+    max-width: 380px;
+    margin: 20px auto;
+    display: block;
+  }
+}
+
+/*  SMALL MOBILE VIEW */
+@media (max-width: 480px) {
+
+  .ticket {
+    width: 100%;
+    padding: 16px;
+    border-radius: 10px;
+  }
+
+  .ticket h2 {
+    font-size: 18px;
+  }
+
+  .ticket h3 {
+    font-size: 15px;
+  }
+
+  .ticket p,
+  #passengerList p {
+    font-size: 13px;
+  }
+
+  #qr {
+    width: 120px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 12px;
+  }
+}

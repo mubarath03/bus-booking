@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f4f4f4;
+}
+
+h2{
+  margin-top: 30px;
+  font-size: x-large;
+  
+}
+
+
+#busList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  
+  gap: 30px;
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 20px;
+}
+
+
+.bus-card {
+  background: #f7f6f3;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: fadeUp 0.6s ease;
+}
+
+.bus-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+.rating {
+  color: #ff9800;
+  margin: 8px 0;
+}
+
+.price {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: #3f51b5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background:red;
+}
+
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@media (max-width: 900px) {
+  .busList {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  }
+}
+
+@media (max-width: 600px) {
+  .busList {
+    grid-template-columns: 1fr; /* 1 column */
+  }
+}

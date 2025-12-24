@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image:url("vecteezy_bus-in-the-street_27298467.jpg");
+    background-size: cover;        
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    
+}
+
+nav {
+    
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.login-btn {
+    background: white;
+    color: #1976d2;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    gap: 60px;
+}
+
+.search-box {
+    padding: 40px;
+    text-align: center;
+    color:whitesmoke;
+    margin-top: 100px;
+    margin-right: 180px;
+    font-size: x-large;
+  
+}
+
+.search-box input {
+    padding: 10px;
+    width: 180px;
+    margin: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+.search-box button {
+    padding: 10px 20px;
+    background: orange;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+  background:red;
+}
+
+
+
+@media (max-width: 768px) {
+
+  body {
+    height: auto;
+    background-position: center;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .login-btn {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .search-box {
+    margin: 40px 10px;
+    padding: 20px;
+    font-size: medium;
+  }
+
+  .search-box input {
+    width: 100%;
+    max-width: 280px;
+    display: block;
+    margin: 10px auto;
+  }
+
+  .search-box button {
+    width: 100%;
+    max-width: 280px;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .search-box {
+    margin-top: 20px;
+    font-size: small;
+  }
+
+  nav h2 {
+    font-size: 18px;
+  }
+
+  .login-btn {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+

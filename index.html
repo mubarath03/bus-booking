@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bus Booking</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div>
+    <h2 class="logo">🚌 SithBus</h2>
+</div>
+<div>
+  <button class="login-btn" onclick="location.href='login.html'">login</button>
+  <button  class="login-btn" onclick="location.href='About.html'">About</button>
+  <button class="login-btn" onclick="location.href='contact.html'">Contact</button>
+</div>
+</nav>
+
+<section class="search-box">
+  <h1>Book Your Bus Ticket</h1>
+
+  <input type="text" id="from" list="fromPlaces" placeholder="From (District)">
+
+<datalist id="fromPlaces">
+  <option value="Chennai">
+  <option value="Tirunelveli">
+</datalist>
+
+<input type="text" id="to" list="toPlaces" placeholder="To (District)">
+
+<datalist id="toPlaces">
+  <option value="Madurai">
+  <option value="Coimbatore">
+  <option value="Trichy">
+</datalist>
+  <button type="button" onclick="searchBus()">Search Buses</button>
+</section>
+
+
+<script src="script.js"></script>
+</body>
+</html>

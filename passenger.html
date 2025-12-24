@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Passenger Details</title>
+<link rel="stylesheet" href="passenger.css">
+</head>
+<body>
+
+<header class="header">
+  <h2>Passenger Details</h2>
+</header>
+
+<div class="card">
+  <label>Name</label>
+  <input id="pname" placeholder="Passenger Name">
+
+  <label>Age</label>
+  <input id="page" type="number" placeholder="Age">
+
+  <label>Gender</label>
+  <select id="pgender">
+    <option value="">Select</option>
+    <option>Male</option>
+    <option>Female</option>
+  </select>
+
+  <label>Mobile Number</label>
+  <input id="pmobile" type="tel" placeholder="10-digit mobile">
+
+  <button onclick="savePassenger()">Proceed to Payment</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

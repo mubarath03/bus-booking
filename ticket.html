@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bus Ticket</title>
+<link rel="stylesheet" href="ticket.css">
+</head>
+<body>
+
+<div class="ticket">
+  <h2>🚌 Bus Ticket</h2>
+
+  <p><b>From:</b> <span id="tFrom"></span></p>
+  <p><b>To:</b> <span id="tTo"></span></p>
+
+  <h3>Passengers</h3>
+  <div id="passengerList"></div>
+
+  <p><b>Total Amount:</b> ₹<span id="tAmount"></span></p>
+
+  <div class="qr-section">
+    <img id="qrCode">
+    <p class="qr-text">Show this QR while boarding</p>
+  </div>
+</div>
+
+<button onclick="window.print()">Download Ticket</button>
+
+<script>
+  
+  let from = localStorage.getItem("from");
+  let to = localStorage.getItem("to");
+  let amount = localStorage.getItem("amount");
+  let passengers = JSON.parse(localStorage.getItem("passengers")) || [];
+
+  document.getElementById("tFrom").innerText = from;
+  document.getElementById("tTo").innerText = to;
+  document.getElementById("tAmount").innerText = amount;
+
+  let list = document.getElementById("passengerList");
+
+  passengers.forEach(p => {
+    list.innerHTML += `
+      <p>Seat ${p.seat} – ${p.name} (${p.age}, ${p.gender})</p>
+    `;
+  });
+
+
+  let qrData = {
+    from,
+    to,
+    amount,
+    passengers
+  };
+
+  document.getElementById("qrCode").src =
+    "https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=" +
+    encodeURIComponent(JSON.stringify(qrData));
+</script>
+
+</body>
+</html>

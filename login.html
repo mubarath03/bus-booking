@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login | SithBus</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+
+<nav class="navbar">
+  <h2 class="logo">🚌 SithBus</h2>
+  <button class="home-btn" onclick="location.href='index.html'">Home</button>
+</nav>
+
+<div class="login-container">
+  <h2>Login</h2>
+
+  <input type="email" id="loginEmail" placeholder="Email">
+  <input type="password" id="loginPassword" placeholder="Password">
+
+  <button onclick="login()">Login</button>
+
+  <p>
+    Don’t have an account?
+    <a href="register.html">Register</a>
+  </p>
+</div>
+
+<script >
+    function login() {
+  const email = document.getElementById("loginEmail").value.trim();
+  const password = document.getElementById("loginPassword").value;
+
+  const user = JSON.parse(localStorage.getItem("user"));
+
+  if (!user || user.email !== email || user.password !== password) {
+    alert("Invalid email or password");
+    return;
+  }
+
+  alert(" Login successful!");
+  window.location.href ="index.html";
+}
+</script>
+</body>
+</html>
